@@ -1,5 +1,5 @@
 #include "arduino_defines.h"
-#include "types.h"
+#include "types.h" 
 #include <LPC21xx.h>
 void pinMode(u32 pinNo,u32 pindir)
 {
@@ -99,3 +99,4 @@ u32 read2pins(u32 pinstartNo,u32 npins)
 	}
 	return bit;
 }
+
