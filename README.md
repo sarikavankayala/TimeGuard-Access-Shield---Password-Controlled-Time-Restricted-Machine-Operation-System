@@ -17,4 +17,3 @@ Overall, your code implements a complete embedded security and scheduling framew
 
 This makes your project suitable for real-world usage where controlled machine access is mandatory.
 
-📊 Block Diagram 1 – System Architecture
