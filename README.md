@@ -19,7 +19,6 @@ This makes your project suitable for real-world usage where controlled machine a
 
 📊 Block Diagram 1 – System Architecture
 
-
 +-----------------------------+
 |        LPC2148 MCU          |
 +-----------------------------+
