@@ -16,3 +16,31 @@ The machine-time editing block (changemachinetime()) updates the allowed operati
 Overall, your code implements a complete embedded security and scheduling framework: live RTC display, password authentication, secure editable system parameters, and time-restricted device activation. The entire design follows the operational flow and requirements defined in the "TimeGuard Access Shield" specification you provided. 
 
 This makes your project suitable for real-world usage where controlled machine access is mandatory.
+
+📊 Block Diagram 1 – System Architecture
+
++-----------------------------+
+|        LPC2148 MCU          |
++-----------------------------+
+   |        |          |
+   |        |          |
+ Keypad   LCD       RTC Module
+ (4x4)   (16x2)     (Internal)
+   |        |          |
+   |        |          |
+   +---- Firmware Logic -----+
+               |
+               |
+        Password Check
+               |
+     +---------+-------------+
+     |                       |
+ Valid Password?        Invalid → Deny Access
+     |
+     |
+Check Time Window (S_TIME–E_TIME)
+     |
+     +----- Allowed → Turn ON Device (LED/Relay)
+     |
+ Not Allowed → Display Time Restriction Message
+
