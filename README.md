@@ -18,29 +18,3 @@ Overall, your code implements a complete embedded security and scheduling framew
 This makes your project suitable for real-world usage where controlled machine access is mandatory.
 
 📊 Block Diagram 1 – System Architecture
-
-+-----------------------------+
-|        LPC2148 MCU          |
-+-----------------------------+
-   |        |          |
-   |        |          |
- Keypad   LCD       RTC Module
- (4x4)   (16x2)     (Internal)
-   |        |          |
-   |        |          |
-   +---- Firmware Logic -----+
-               |
-               |
-        Password Check
-               |
-     +---------+-------------+
-     |                       |
- Valid Password?        Invalid → Deny Access
-     |
-     |
-Check Time Window (S_TIME–E_TIME)
-     |
-     +----- Allowed → Turn ON Device (LED/Relay)
-     |
- Not Allowed → Display Time Restriction Message
-
